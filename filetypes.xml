@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="17">
     <extensionMap>
       <mapping ext="klib" type="ARCHIVE" />
+      <mapping pattern="idea" type="CLASS" />
       <mapping pattern="grade book" type="PLAIN_TEXT" />
       <mapping pattern="exercises" type="PLAIN_TEXT" />
     </extensionMap>
