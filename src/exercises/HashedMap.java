@@ -1,46 +1,46 @@
-//package exercises;
-//
-//import java.util.HashMap;
-//import java.util.Map;
-//import java.util.Scanner;
-//
-//public class HashedMap {
-//    public static void main(String[] args) {
-//
-//        HashMap<String, Double> students= new HashMap<>();
-//        Scanner in = new Scanner(System.in);
-//        int [] newStudentID;
-//
-//        System.out.println("Enter your student's ID (or ENTER to finish):");
-//
-//        // Get student ID's and names
-//        do {
-//
-//            System.out.print("ID's: ");
-//            newStudentID = in.nextLine();
-//
-//            if (!newStudentID.equals("")) {
-//                System.out.print("Name: ");
-//                Double newName = in.nextDouble();
-//                studentsID.put(newStudentID, newName);
-//
-//                // Read in the newline before looping back
-//                in.nextLine();
-//            }
-//in
-//        } while(!newStudentID.equals(""));
-//
-//        // Print class roster
-//        System.out.println("\nClass roster:");
-//        double sum = 0.0;
-//
-//        for (Map.Entry<int, Double> studentID : studentsID.entrySet()) {
-//            System.out.println(studentID.getKey() + " (" + studentID.getValue() + ")");
-//            sum += studentID.getValue();
-//        }
-//
-//        //double avg = sum / students.size();
-//        //System.out.println("Average grade: " + avg);
-//    }
-//
-//}
+package exercises;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+/**
+ * Created by LaunchCode
+ */
+public class HashedMap {
+
+    public static void main(String[] args) {
+
+        HashMap<Integer, String> students = new HashMap<>();
+        Scanner in = new Scanner(System.in);
+        String newStudent;
+
+        System.out.println("Enter your students (or ENTER to finish):");
+
+        // Get student names and grades
+        do {
+
+            System.out.print("Student: ");
+            newStudent = in.nextLine();
+
+            if (!newStudent.equals("")) {
+                System.out.print("ID: ");
+                Integer newStudentID = in.nextInt();
+                students.put(newStudentID, newStudent);
+
+                // Read in the newline before looping back
+                in.nextLine();
+            }
+
+        } while (!newStudent.equals(""));
+
+        // Print class roster
+        System.out.println("\nClass roster:");
+
+        for (Map.Entry<Integer, String> student : students.entrySet()) {
+            System.out.println(student.getKey() + ": " + student.getValue());
+        }
+
+    }
+
+}
